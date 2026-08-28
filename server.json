@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "at.blckalpaca/knowledge-base",
+  "title": "Blck Alpaca Knowledge Base",
+  "description": "Search Blck Alpaca's knowledge base on SEO, GEO, AI agents and marketing automation.",
+  "version": "1.0.0",
+  "websiteUrl": "https://blckalpaca.at/de/entwickler",
+  "icons": [
+    {
+      "src": "https://blckalpaca.at/web-app-manifest-512x512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://blckalpaca.at/mcp"
+    }
+  ]
+}
