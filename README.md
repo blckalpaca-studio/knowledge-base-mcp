@@ -89,4 +89,4 @@ article URL returned by the tool.
 
 ## Contact
 
-office@blckalpaca.at — Blck Alpaca OG, Vienna, Austria
+office@blckalpaca.at — Blck Alpaca e.U., Vienna, Austria
