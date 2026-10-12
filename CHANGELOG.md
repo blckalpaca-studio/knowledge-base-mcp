@@ -4,6 +4,14 @@ Versions follow the manifest in [`server.json`](./server.json). A published vers
 official MCP Registry is immutable — any change to description, endpoint or icon needs a
 new version number.
 
+## 1.0.1 — 2026-10-12
+
+Metadata only, same endpoint.
+
+- Title "Blck Alpaca Agentic Audit & Knowledge Base"; the description names the website
+  audit (`audit_website`), which the server has offered since October 2026
+- `websiteUrl` points to the English developer page
+
 ## Repository — 2026-10-12
 
 Not a server version; `server.json` stays at 1.0.0.
