@@ -19,6 +19,8 @@ Not a server version; `server.json` stays at 1.0.0.
 - Claude plugin `blck-alpaca` 1.0.0 under [`plugins/blck-alpaca`](./plugins/blck-alpaca), with
   the marketplace manifest at `.claude-plugin/marketplace.json`. Its own changelog is in the
   plugin README.
+- Antigravity plugin under [`plugins/blck-alpaca-antigravity`](./plugins/blck-alpaca-antigravity)
+  (`plugin.json`, `mcp_config.json` with `serverUrl`, the same skill).
 - README lists `audit_website`, the fifth tool the server has offered since October 2026,
   and its limits.
 

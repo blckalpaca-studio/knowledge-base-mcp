@@ -29,6 +29,13 @@ claude plugin marketplace add blckalpaca-studio/knowledge-base-mcp
 claude plugin install blck-alpaca@blckalpaca
 ```
 
+Antigravity plugin, same server and skill (see
+[`plugins/blck-alpaca-antigravity`](./plugins/blck-alpaca-antigravity)):
+
+```bash
+agy plugin install https://github.com/blckalpaca-studio/knowledge-base-mcp/tree/main/plugins/blck-alpaca-antigravity
+```
+
 Server only, Claude Code:
 
 ```bash
