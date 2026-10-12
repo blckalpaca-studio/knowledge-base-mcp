@@ -1,0 +1,19 @@
+{
+  "name": "blck-alpaca",
+  "displayName": "Blck Alpaca Agentic Audit",
+  "version": "1.0.0",
+  "description": "Check a public website for AI-agent readiness and GEO: a score out of 100, the evidence behind every check and the three fixes with the biggest impact, each with a Knowledge Base guide where one exists. Also answers questions on SEO, GEO, AI agents and social media from 431 Blck Alpaca Knowledge Base articles in German, English and Slovak, with the source cited. Read-only, no account needed.",
+  "author": {
+    "name": "Blck Alpaca e.U.",
+    "email": "office@blckalpaca.at",
+    "url": "https://blckalpaca.at"
+  },
+  "homepage": "https://blckalpaca.at/en/agentic-check",
+  "repository": "https://github.com/blckalpaca-studio/knowledge-base-mcp",
+  "license": "MIT",
+  "keywords": ["seo", "geo", "ai-agents", "website-audit", "knowledge-base", "mcp"],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://blckalpaca.at/en/developers#connect",
+  "supportUrl": "https://blckalpaca.at/en/contact",
+  "privacyPolicyUrl": "https://blckalpaca.at/en/privacy"
+}

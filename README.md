@@ -1,14 +1,14 @@
 # Blck Alpaca Knowledge Base MCP
 
 Public MCP server for the Blck Alpaca knowledge base: SEO, GEO (generative engine
-optimization), AI agents and marketing automation. Read-only, no authentication,
-German, English and Slovak.
+optimization), AI agents and marketing automation, plus a website audit for AI-agent
+readiness. Read-only, no authentication, German, English and Slovak.
 
 Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=at.blckalpaca/knowledge-base)
 as `at.blckalpaca/knowledge-base`.
 
-This repository holds metadata only. The server runs as part of blckalpaca.at and its
-source is not published here.
+This repository holds metadata and the Claude plugin. The server runs as part of
+blckalpaca.at and its source is not published here.
 
 ## Endpoint
 
@@ -21,7 +21,15 @@ GET stream. Every call is a single POST.
 
 ## Install
 
-Claude Code:
+Claude plugin with the server and a skill that uses it (see
+[`plugins/blck-alpaca`](./plugins/blck-alpaca)):
+
+```bash
+claude plugin marketplace add blckalpaca-studio/knowledge-base-mcp
+claude plugin install blck-alpaca@blckalpaca
+```
+
+Server only, Claude Code:
 
 ```bash
 claude mcp add --transport http blckalpaca-knowledge-base https://blckalpaca.at/mcp
@@ -59,6 +67,7 @@ An unknown version gets JSON-RPC error `-32022` with the full list under `data.s
 | `list_knowledge_categories` | Structure of the knowledge base: all categories with their topics, each with slug and URL. Entry point when no search term is known. | — | `locale` |
 | `list_knowledge_topic_articles` | All published articles of one topic. | `categorySlug`, `topicSlug` | `locale` |
 | `get_knowledge_article` | Full article as Markdown, plus short definition, key takeaways, sourced statistics and FAQ. | `categorySlug`, `topicSlug`, `articleSlug` | `locale` |
+| `audit_website` | Checks a public website for AI-agent readiness and GEO (GET only, no login): score out of 100 across five weighted areas, evidence for every check, the three biggest fixes with a Knowledge Base guide where one exists, link to the full report. | `url` | `locale` (`de`\|`en`\|`sk`, default `en`) |
 
 Slugs are localized. Category and topic slug must come from the same locale as the
 request; if they do not match, the response says why. Content that is not translated into
@@ -69,7 +78,8 @@ can be passed straight into `get_knowledge_article`.
 
 ## Rate limit
 
-240 requests per hour and IP. Every response carries `RateLimit` and `RateLimit-Policy`
+240 requests per hour and IP; `audit_website` additionally at most 10 checks per website
+per hour and 60 in total. Every response carries `RateLimit` and `RateLimit-Policy`
 (IETF draft) plus the legacy `RateLimit-Limit` / `-Remaining` / `-Reset` triple. Over the
 limit the server answers HTTP 429 and JSON-RPC
 `-32603` with `data.retryAfterSeconds`, plus a `Retry-After` header.

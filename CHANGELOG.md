@@ -4,6 +4,16 @@ Versions follow the manifest in [`server.json`](./server.json). A published vers
 official MCP Registry is immutable — any change to description, endpoint or icon needs a
 new version number.
 
+## Repository — 2026-10-12
+
+Not a server version; `server.json` stays at 1.0.0.
+
+- Claude plugin `blck-alpaca` 1.0.0 under [`plugins/blck-alpaca`](./plugins/blck-alpaca), with
+  the marketplace manifest at `.claude-plugin/marketplace.json`. Its own changelog is in the
+  plugin README.
+- README lists `audit_website`, the fifth tool the server has offered since October 2026,
+  and its limits.
+
 ## 1.0.0 — 2026-08-28
 
 First public release.
