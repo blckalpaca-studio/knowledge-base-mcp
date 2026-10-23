@@ -14,7 +14,7 @@ Metadata only, same endpoint.
 
 ## Repository — 2026-10-12
 
-Not a server version; `server.json` stays at 1.0.0.
+Not a server version; the plugins do not touch `server.json`.
 
 - Claude plugin `blck-alpaca` 1.0.0 under [`plugins/blck-alpaca`](./plugins/blck-alpaca), with
   the marketplace manifest at `.claude-plugin/marketplace.json`. Its own changelog is in the

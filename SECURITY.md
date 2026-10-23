@@ -2,7 +2,8 @@
 
 ## Scope
 
-This repository contains metadata only. Reports concerning the live MCP server at
+This repository contains the registry metadata and the Claude and Antigravity plugins
+(configuration and one skill, no server code). Reports concerning the live MCP server at
 `https://blckalpaca.at/mcp` and the surrounding blckalpaca.at API belong here as well.
 
 ## Reporting
@@ -15,7 +16,9 @@ writes.
 
 ## What the server does
 
-- Read-only. The tools return published knowledge base content; there is no write path.
+- Read-only. Four tools return published knowledge base content. `audit_website` fetches
+  the public website you name (GET only, no login) and scores it; private and internal
+  addresses are refused. There is no write path.
 - No authentication and no user data. Requests are not tied to an account, and no personal
   data is required or stored beyond what is needed for rate limiting and standard access
   logs.
