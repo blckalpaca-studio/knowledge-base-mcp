@@ -101,7 +101,6 @@ article URL returned by the tool.
 - Developer documentation: [DE](https://blckalpaca.at/de/entwickler) · [EN](https://blckalpaca.at/en/developers) · [SK](https://blckalpaca.at/sk/vyvojari)
 - OpenAPI spec of the surrounding REST API: https://blckalpaca.at/openapi.json
 - Server card: https://blckalpaca.at/.well-known/mcp/server-card.json
-- Smithery: https://smithery.ai/server/blckalpaca/knowledge-base
 - Manifest: [`server.json`](./server.json)
 
 ## Contact
